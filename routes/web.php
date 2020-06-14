@@ -16,3 +16,9 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+
+Route::get('/author/create', 'AuthorController@create');
+Route::post('/author', 'AuthorController@store');
+Route::get('/author/{author_id}/edit', 'AuthorController@edit');
+Route::put('/author/{author_id}/edit', 'AuthorController@update');
